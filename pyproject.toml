@@ -1,9 +1,0 @@
-[project]
-name = "PhDice"
-version = "0.1.0"
-description = "PhDice - Photo Dice - Roll your photographic challenge"
-readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "streamlit>=1.52.2",
-]
