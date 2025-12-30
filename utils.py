@@ -16,6 +16,7 @@ def generate_challange(id: int) -> dict:
         "Color": get_by_index(Color, id_str[2]),
         "Theme": get_by_index(Theme, id_str[3]),
         "Time of Day": get_by_index(TimeOfDay, id_str[4]),
+        "ID": id_str
     }
 
 def generate_seed() -> int:

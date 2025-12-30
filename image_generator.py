@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 
-width, height = 550, 300
+width, height = 550, 380
 bg_color = (255, 255, 255)
 text_color = (0, 0, 0)
 font_size = 45
@@ -16,6 +16,7 @@ icons = {
     "Days": "icons/calendar.png",
     "Time of Day": "icons/clock.png",
     "Format": "icons/frames.png",
+    "ID": "icons/id.png"
 }
 
 
