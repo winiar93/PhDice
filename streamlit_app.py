@@ -4,7 +4,7 @@ from image_generator import generate_challenge_card
 
 st.set_page_config(page_title="PhDice", page_icon="📸")
 
-left, mid, right = st.columns([5, 7, 5])
+left, mid, right = st.columns([5, 9, 5])
 
 if "current_img" not in st.session_state:
     st.session_state.current_img = None
@@ -16,6 +16,15 @@ with mid:
         "<h3 style='text-align: center; color: gray;'>Roll the rules.<br> Shoot the photo.</h3>",
         unsafe_allow_html=True,
     )
+    st.markdown("""
+        **PhDice** is a random challenge generator designed to push your photographic boundaries. 
+
+        ### How it works:
+        1. **Roll:** Generate your unique photo rules.
+        2. **Shoot:** Take photos using these rules.
+        3. **Share:** Use the Challenge ID to share your results with others.
+        ---
+        """)
 
     challange_id = st.number_input(
         label="Have a Challenge ID? \n\nEnter it below to see more details."
@@ -41,20 +50,3 @@ with mid:
             hashtag_id = f"#PhDice{random_seed}"
             st.write("Copy and paste these tags to your post on Instagram or X:")
             st.code(f"{hashtag_community} {hashtag_id}")
-
-            st.markdown(
-                f"""
-    <div style="background-color: #f0f2f6; padding: 15px; border-radius: 10px;">
-        <strong>Why use both?</strong><br>
-        1. Use <b>{hashtag_community}</b> to join our global gallery.<br>
-        2. Use <b>{hashtag_id}</b> to see how others interpreted this specific task!
-    </div>
-    """,
-                unsafe_allow_html=True,
-            )
-        st.download_button(
-            label="Download image",
-            data=image_buffer,
-            file_name=f"PhDice{random_seed}.png",
-            mime="image/png",
-        )
