@@ -48,5 +48,5 @@ with mid:
 
             hashtag_community = "#PhDice"
             hashtag_id = f"#PhDice{random_seed}"
-            st.write("Copy and paste these tags to your post on Instagram or X:")
+            st.write("Ready to post? Copy these tags for Instagram or X:")
             st.code(f"{hashtag_community} {hashtag_id}")
