@@ -11,7 +11,6 @@ class Orientation(Enum):
     VERTICAL = "Vertical"
     HORIZONTAL = "Horizontal"
     SQUARE = "Square"
-    ANY = "Any"
 
 
 class Color(Enum):
